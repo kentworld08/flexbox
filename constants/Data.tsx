@@ -94,6 +94,20 @@ export const movieCards = [
     image: "/card1.png",
   },
   {
+    title: "For Kids",
+    channels: "12k Channels",
+    description:
+      "We have a huge amount of TV content for children. Watch only the best channels with children's cartoons and educational programs.",
+    image: "/card1.png",
+  },
+  {
+    title: "For Kids",
+    channels: "12k Channels",
+    description:
+      "We have a huge amount of TV content for children. Watch only the best channels with children's cartoons and educational programs.",
+    image: "/card1.png",
+  },
+  {
     title: "TV Shows & Series",
     channels: "16k Channels",
     description:
@@ -169,3 +183,79 @@ export const logo = [
     color: "from-blue-400 to-blue-500",
   },
 ];
+
+
+ export const shows = [
+    {
+      id: 101,
+      title: "The Crown",
+      image: "/placeholder.svg?height=400&width=270&text=The+Crown",
+      alt: "The Crown poster",
+      release: "November 9",
+    },
+    {
+      id: 102,
+      title: "Wednesday",
+      image: "/placeholder.svg?height=400&width=270&text=Wednesday",
+      alt: "Wednesday poster",
+      release: "November 23",
+    },
+    {
+      id: 103,
+      title: "House of the Dragon",
+      image: "/placeholder.svg?height=400&width=270&text=House+of+Dragon",
+      alt: "House of the Dragon poster",
+      release: "August 21",
+    },
+    {
+      id: 104,
+      title: "The Lord of the Rings: The Rings of Power",
+      image: "/placeholder.svg?height=400&width=270&text=Rings+of+Power",
+      alt: "The Lord of the Rings: The Rings of Power poster",
+    },
+  ]
+
+ export const movies = [
+    {
+      id: 1,
+      title: "The Woman King",
+      image: "/18.webp",
+      alt: "The Woman King poster",
+      release: "October 2",
+    },
+    {
+      id: 2,
+      title: "Avatar: The Way of Water",
+      image: "/17.webp",
+      alt: "Avatar: The Way of Water poster",
+      release: "December",
+    },
+    {
+      id: 3,
+      title: "Devotion",
+      image: "/22.webp",
+      alt: "Devotion poster",
+      release: "November 23",
+    },
+    {
+      id: 4,
+      title: "Black Panther: Wakanda Forever",
+      image: "/placeholder.svg?height=400&width=270&text=Black+Panther",
+      alt: "Black Panther: Wakanda Forever poster",
+      release: "November 11",
+    },
+    {
+      id: 5,
+      title: "Puss in Boots: The Last Wish",
+      image: "/placeholder.svg?height=400&width=270&text=Puss+in+Boots",
+      alt: "Puss in Boots: The Last Wish poster",
+      release: "December 21",
+    },
+    {
+      id: 6,
+      title: "Babylon",
+      image: "/placeholder.svg?height=400&width=270&text=Babylon",
+      alt: "Babylon poster",
+      release: "December 23",
+    },
+  ]

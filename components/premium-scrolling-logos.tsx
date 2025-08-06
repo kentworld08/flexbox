@@ -5,8 +5,8 @@ export default function PremiumScrollingLogos() {
   const infiniteLogos = [...logo, ...logo, ...logo];
 
   return (
-    <section className="py-20 bg-[#111111] text-white overflow-hidden relative">
-      {/* Background Effects */}
+    <section className=" px-4 lg:px-[80px] py-20 bg-[#111111] text-white overflow-hidden relative">
+     
       <div className="absolute inset-0 bg-[#111111]" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
@@ -15,15 +15,15 @@ export default function PremiumScrollingLogos() {
 
       <div className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-[84px] font-medium leading-[102px] w-[996px] bg-clip-text text-transparent hover:text-transparent bg-[linear-gradient(to_right,_#F22801,_#FC9000)] justify-self-center">
+          <h2 className="text-2xl lg:text-[84px] font-medium leading-[102px] w-[996px] bg-clip-text text-transparent hover:text-transparent bg-[linear-gradient(to_right,_#F22801,_#FC9000)] justify-self-center">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-[17px] font-normal text-gray-300 max-w-[576px] mx-auto leading-[28px]">
+          <p className="text-base lg:text-[17px] font-normal text-gray-300 max-w-[576px] mx-auto leading-[28px]">
             Partnering with the world's leading entertainment companies to bring
             you the best movie experience
           </p>
         </div>
-        <div className="relative mb-12">
+        <div className="relative mb-12 ">
           <div className="flex overflow-hidden">
             <div className="flex animate-scroll-smooth hover:pause-animation">
               {infiniteLogos.map((logo, index) => (

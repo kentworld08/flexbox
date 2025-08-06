@@ -23,7 +23,7 @@ export default function HeroSection() {
   const currentImage = heroImages[currentSlide];
 
   return (
-    <div className="relative min-h-screen overflow-hidden md:px-[80px] px-4">
+    <div className="relative min-h-screen overflow-hidden md:px-[80px]">
       <div className="absolute inset-0">
         <img
           src={currentImage || "/placeholder.svg"}
@@ -90,22 +90,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Mobile Menu Button */}
-      <button className="md:hidden absolute top-4 right-4 z-20 text-white p-2">
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
+  
     </div>
   );
 }
