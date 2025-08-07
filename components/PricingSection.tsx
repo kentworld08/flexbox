@@ -6,17 +6,10 @@ export default function Pricing() {
       id="pricing"
       className="bg-gray-900 text-white py-20 px-6 md:px-20"
     >
-      <h2
-        className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] 
-               leading-[1.2] text-center mb-8 font-medium 
-               bg-clip-text text-transparent 
-               bg-gradient-to-r from-[#F22801] to-[#FC9000] 
-               hover:text-transparent 
-               max-w-[90%] lg:w-[900px] mx-auto"
-      >
+      <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
         Pricing Plans
       </h2>
-      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-3">
+      <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-3 ">
         {plans.map(({ name, price, features, popular }, idx) => (
           <div
             key={idx}
@@ -25,7 +18,7 @@ export default function Pricing() {
             }`}
           >
             {popular && (
-              <span className="inline-block bg-[#FC9000] text-black text-xs font-semibold px-3 py-1 rounded-full mb-4 self-start">
+              <span className="inline-block bg-[linear-gradient(to_right,_#F22801,_#FC9000)]  text-black text-xs font-semibold px-3 py-1 rounded-full mb-4 self-start">
                 Most Popular
               </span>
             )}
@@ -37,7 +30,7 @@ export default function Pricing() {
               {features.map((feat, i) => (
                 <li key={i} className="flex items-center">
                   <svg
-                    className="w-5 h-5 text-orange-500 mr-2 flex-shrink-0"
+                    className="w-5 h-5 text-[#F22801] mr-2 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -56,7 +49,7 @@ export default function Pricing() {
             <button
               className={`mt-auto rounded-md py-3 font-semibold text-white transition ${
                 popular
-                  ? "bg-orange-500 hover:bg-orange-600"
+                  ? "bg-[linear-gradient(to_right,_#F22801,_#FC9000)] hover:bg-orange-700 cursor-pointer"
                   : "bg-gray-700 hover:bg-gray-600"
               }`}
             >

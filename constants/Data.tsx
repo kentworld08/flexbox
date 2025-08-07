@@ -24,69 +24,6 @@ export const navLinks = [
   { label: "Contact Us", href: "#contact" },
 ];
 
-export const logos = [
-  {
-    name: "Netflix",
-    url: "/placeholder.svg?height=60&width=120&text=Netflix",
-    alt: "Netflix logo",
-  },
-  {
-    name: "Disney+",
-    url: "/placeholder.svg?height=60&width=120&text=Disney%2B",
-    alt: "Disney Plus logo",
-  },
-  {
-    name: "Warner Bros",
-    url: "/placeholder.svg?height=60&width=120&text=Warner+Bros",
-    alt: "Warner Bros logo",
-  },
-  {
-    name: "Universal",
-    url: "/placeholder.svg?height=60&width=120&text=Universal",
-    alt: "Universal Studios logo",
-  },
-  {
-    name: "Paramount",
-    url: "/placeholder.svg?height=60&width=120&text=Paramount",
-    alt: "Paramount Pictures logo",
-  },
-  {
-    name: "Sony Pictures",
-    url: "/placeholder.svg?height=60&width=120&text=Sony+Pictures",
-    alt: "Sony Pictures logo",
-  },
-  {
-    name: "HBO Max",
-    url: "/placeholder.svg?height=60&width=120&text=HBO+Max",
-    alt: "HBO Max logo",
-  },
-  {
-    name: "Amazon Prime",
-    url: "/placeholder.svg?height=60&width=120&text=Prime+Video",
-    alt: "Amazon Prime Video logo",
-  },
-  {
-    name: "Apple TV+",
-    url: "/placeholder.svg?height=60&width=120&text=Apple+TV%2B",
-    alt: "Apple TV Plus logo",
-  },
-  {
-    name: "Hulu",
-    url: "/placeholder.svg?height=60&width=120&text=Hulu",
-    alt: "Hulu logo",
-  },
-  {
-    name: "MGM",
-    url: "/placeholder.svg?height=60&width=120&text=MGM",
-    alt: "MGM Studios logo",
-  },
-  {
-    name: "20th Century",
-    url: "/placeholder.svg?height=60&width=120&text=20th+Century",
-    alt: "20th Century Studios logo",
-  },
-];
-
 export const movieCards = [
   {
     title: "For Kids",
@@ -310,25 +247,25 @@ export const plans = [
 
 export const features = [
   {
-    icon: <Zap className="w-8 h-8 text-orange-500" />,
+    icon: <Zap className="w-8 h-8 text-[#F22801]" />,
     title: "Fast & Reliable",
     description: "Stream seamlessly with zero buffering.",
     glowColor: "from-orange-500 to-yellow-400",
   },
   {
-    icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
+    icon: <ShieldCheck className="w-8 h-8 text-[#F22801]" />,
     title: "Secure & Private",
     description: "Top-notch encryption protects your data.",
     glowColor: "from-red-500 to-pink-500",
   },
   {
-    icon: <Tv className="w-8 h-8 text-orange-500" />,
+    icon: <Tv className="w-8 h-8 text-[#F22801]" />,
     title: "Huge Channel Library",
     description: "Over 100k channels for every taste.",
     glowColor: "from-purple-500 to-indigo-500",
   },
   {
-    icon: <UserCheck className="w-8 h-8 text-orange-500" />,
+    icon: <UserCheck className="w-8 h-8 text-[#F22801]" />,
     title: "Easy Setup",
     description: "Get started in minutes on any device.",
     glowColor: "from-green-400 to-teal-400",

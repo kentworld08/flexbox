@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is too short"),
-  email: z.string().email("Invalid email address"),
+  email: z.email("Invalid email address"),
   message: z.string().min(10, "Message should be at least 10 characters"),
 });
 
@@ -88,7 +88,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-orange-500 hover:bg-orange-600 transition-all px-6 py-3 rounded-md text-white font-semibold disabled:opacity-50"
+            className=" bg-[linear-gradient(to_right,_#F22801,_#FC9000)] hover:bg-orange-600 transition-all px-6 py-3 rounded-md text-white font-semibold disabled:opacity-50"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
