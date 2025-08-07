@@ -17,7 +17,7 @@ const AboutIPTV = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="relative z-10">
-        <h1 className="text-3xl sm:text-5xl lg:text-[84px] lg:leading-[102px] leading-snug bg-clip-text text-transparent hover:text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] tracking-tight text-center font-medium">
+        <h1 className="text-[84px] text-center mb-8 font-medium leading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent lg:w-[900px] mx-auto">
           About IPTV Services
         </h1>
 
