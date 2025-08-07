@@ -90,7 +90,10 @@ export default function MovieShowsCarousel() {
   };
 
   return (
-    <section className="bg-black text-white py-12 md:py-20 min-h-screen flex flex-col items-center justify-center">
+    <section
+      id="channels"
+      className="bg-[#111111] text-white py-12 md:py-20 min-h-screen flex flex-col items-center justify-center"
+    >
       <div className="container mx-auto px-4 w-full max-w-5xl">
         <div className="flex justify-center mb-12 ">
           <div className="relative flex rounded-full p-1 bg-transparent border border-[#FC9000]">

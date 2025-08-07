@@ -2,7 +2,10 @@ import { plans } from "@/constants/Data";
 
 export default function Pricing() {
   return (
-    <section className="bg-gray-900 text-white py-20 px-6 md:px-20">
+    <section
+      id="pricing"
+      className="bg-gray-900 text-white py-20 px-6 md:px-20"
+    >
       <h2 className="text-[84px] font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent">
         Pricing Plans
       </h2>
@@ -11,11 +14,11 @@ export default function Pricing() {
           <div
             key={idx}
             className={`border rounded-xl p-8 flex flex-col justify-between ${
-              popular ? "border-[#F22801] bg-orange-600/20" : "border-gray-700"
+              popular ? "border-[#FC9000]" : "border-gray-700"
             }`}
           >
             {popular && (
-              <span className="inline-block bg-[#F22801] text-black text-xs font-semibold px-3 py-1 rounded-full mb-4 self-start">
+              <span className="inline-block bg-[#FC9000] text-black text-xs font-semibold px-3 py-1 rounded-full mb-4 self-start">
                 Most Popular
               </span>
             )}
