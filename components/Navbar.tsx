@@ -37,8 +37,6 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Mobile Menu Button */}
-
       <MobileMenu />
     </nav>
   );
@@ -49,26 +47,41 @@ const MobileMenu = () => {
   return (
     <>
       <button
-        id="menu-btn"
-        onClick={() => setOpen((prev) => !prev)}
-        className="block md:hidden text-white focus:outline-none"
+        onClick={() => setOpen(!open)}
+        className="text-white p-2"
+        aria-label="Toggle Menu"
       >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        {open ? (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        ) : (
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        )}
       </button>
       <div
         className={`${
-          open ? "translate-x-1000" : "translate-x-0"
-        } absolute bg-[#111111] top-20 w-full transition-all duration-300 ease-in-out py-5 md:hidden`}
+          open ? "translate-x-0 block" : "translate-x-1000 hidden"
+        } absolute bg-[#111111] top-20 w-full transition-all duration-300 ease-in-out py-5 md:hidden left-0 right-0 `}
       >
         <div className="flex flex-col items-center gap-6  px-6 py-3">
           {navLinks.map((link, index) => (
