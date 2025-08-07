@@ -76,7 +76,7 @@ const MobileMenu = () => {
               key={index}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="transition-colors text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(to_right,_#F22801,_#FC9000)] "
+              className="inline-block transition-colors text-white hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(to_right,_#F22801,_#FC9000)]"
             >
               {link.label}
             </Link>

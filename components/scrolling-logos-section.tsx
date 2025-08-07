@@ -7,17 +7,15 @@ export default function ScrollingLogosSection() {
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [cardWidth, setCardWidth] = useState(320); // fallback width
+  const [cardWidth, setCardWidth] = useState(320);
   const cardGap = 24;
   const [cardsPerView, setCardsPerView] = useState(1);
 
-  // Measure card width & cards per view dynamically
   useEffect(() => {
     const updateMeasurements = () => {
       if (containerRef.current && carouselRef.current) {
         const containerWidth = containerRef.current.offsetWidth;
 
-        // Type cardEl explicitly
         const cardEl = carouselRef.current.querySelector<HTMLDivElement>("div");
         if (cardEl) {
           const actualCardWidth = cardEl.getBoundingClientRect().width;
@@ -29,7 +27,7 @@ export default function ScrollingLogosSection() {
 
           setCurrentMovieIndex((prevIndex) => {
             const maxIndex = movieCards.length - visibleCards;
-            // Clamp index between 0 and maxIndex (maxIndex could be negative)
+
             return Math.min(Math.max(prevIndex, 0), Math.max(maxIndex, 0));
           });
         }
@@ -47,7 +45,7 @@ export default function ScrollingLogosSection() {
     if (!carouselRef.current) return;
 
     const handleScrollTransform = () => {
-      const isDesktop = window.innerWidth >= 768; // md breakpoint
+      const isDesktop = window.innerWidth >= 768;
       if (isDesktop) {
         const offset = currentMovieIndex * cardWidth;
         carouselRef.current!.style.transform = `translateX(-${offset}px)`;
@@ -78,7 +76,6 @@ export default function ScrollingLogosSection() {
       <div ref={containerRef} className="container mx-auto px-4">
         <div className="mt-20">
           <div className="relative group">
-            {/* Left arrow — hidden on mobile */}
             <button
               onClick={handlePrevMovie}
               disabled={currentMovieIndex === 0}
@@ -100,7 +97,6 @@ export default function ScrollingLogosSection() {
               </svg>
             </button>
 
-            {/* Right arrow — hidden on mobile */}
             <button
               onClick={handleNextMovie}
               disabled={currentMovieIndex >= movieCards.length - cardsPerView}
