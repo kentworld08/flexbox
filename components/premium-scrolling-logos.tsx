@@ -1,12 +1,17 @@
 "use client";
 import { logo } from "@/constants/Data";
+interface infiniteLogosProps {
+  name: string;
+  url: string;
+  color: string;
+}
+[];
 
 export default function PremiumScrollingLogos() {
-  const infiniteLogos = [...logo, ...logo, ...logo];
+  const infiniteLogos: infiniteLogosProps[] = [...logo, ...logo, ...logo];
 
   return (
     <section className=" px-4 lg:px-[80px] py-20 bg-[#111111] text-white overflow-hidden relative">
-     
       <div className="absolute inset-0 bg-[#111111]" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />

@@ -16,10 +16,10 @@ export const people = [
 ];
 
 export const navLinks = [
-  { label: "Channels", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Pricing", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Channels", href: "#channels" },
+  { label: "About Us", href: "#about" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 export const logos = [
@@ -184,78 +184,137 @@ export const logo = [
   },
 ];
 
+export const shows = [
+  {
+    id: 101,
+    title: "The Crown",
+    image: "/placeholder.svg?height=400&width=270&text=The+Crown",
+    alt: "The Crown poster",
+    release: "November 9",
+  },
+  {
+    id: 102,
+    title: "Wednesday",
+    image: "/placeholder.svg?height=400&width=270&text=Wednesday",
+    alt: "Wednesday poster",
+    release: "November 23",
+  },
+  {
+    id: 103,
+    title: "House of the Dragon",
+    image: "/placeholder.svg?height=400&width=270&text=House+of+Dragon",
+    alt: "House of the Dragon poster",
+    release: "August 21",
+  },
+  {
+    id: 104,
+    title: "The Lord of the Rings: The Rings of Power",
+    image: "/placeholder.svg?height=400&width=270&text=Rings+of+Power",
+    alt: "The Lord of the Rings: The Rings of Power poster",
+  },
+];
 
- export const shows = [
-    {
-      id: 101,
-      title: "The Crown",
-      image: "/placeholder.svg?height=400&width=270&text=The+Crown",
-      alt: "The Crown poster",
-      release: "November 9",
-    },
-    {
-      id: 102,
-      title: "Wednesday",
-      image: "/placeholder.svg?height=400&width=270&text=Wednesday",
-      alt: "Wednesday poster",
-      release: "November 23",
-    },
-    {
-      id: 103,
-      title: "House of the Dragon",
-      image: "/placeholder.svg?height=400&width=270&text=House+of+Dragon",
-      alt: "House of the Dragon poster",
-      release: "August 21",
-    },
-    {
-      id: 104,
-      title: "The Lord of the Rings: The Rings of Power",
-      image: "/placeholder.svg?height=400&width=270&text=Rings+of+Power",
-      alt: "The Lord of the Rings: The Rings of Power poster",
-    },
-  ]
+export const movies = [
+  {
+    id: 1,
+    title: "The Woman King",
+    image: "/18.webp",
+    alt: "The Woman King poster",
+    release: "October 2",
+  },
+  {
+    id: 2,
+    title: "Avatar: The Way of Water",
+    image: "/17.webp",
+    alt: "Avatar: The Way of Water poster",
+    release: "December",
+  },
+  {
+    id: 3,
+    title: "Devotion",
+    image: "/22.webp",
+    alt: "Devotion poster",
+    release: "November 23",
+  },
+  {
+    id: 4,
+    title: "Black Panther: Wakanda Forever",
+    image: "/placeholder.svg?height=400&width=270&text=Black+Panther",
+    alt: "Black Panther: Wakanda Forever poster",
+    release: "November 11",
+  },
+  {
+    id: 5,
+    title: "Puss in Boots: The Last Wish",
+    image: "/placeholder.svg?height=400&width=270&text=Puss+in+Boots",
+    alt: "Puss in Boots: The Last Wish poster",
+    release: "December 21",
+  },
+  {
+    id: 6,
+    title: "Babylon",
+    image: "/placeholder.svg?height=400&width=270&text=Babylon",
+    alt: "Babylon poster",
+    release: "December 23",
+  },
+];
 
- export const movies = [
-    {
-      id: 1,
-      title: "The Woman King",
-      image: "/18.webp",
-      alt: "The Woman King poster",
-      release: "October 2",
-    },
-    {
-      id: 2,
-      title: "Avatar: The Way of Water",
-      image: "/17.webp",
-      alt: "Avatar: The Way of Water poster",
-      release: "December",
-    },
-    {
-      id: 3,
-      title: "Devotion",
-      image: "/22.webp",
-      alt: "Devotion poster",
-      release: "November 23",
-    },
-    {
-      id: 4,
-      title: "Black Panther: Wakanda Forever",
-      image: "/placeholder.svg?height=400&width=270&text=Black+Panther",
-      alt: "Black Panther: Wakanda Forever poster",
-      release: "November 11",
-    },
-    {
-      id: 5,
-      title: "Puss in Boots: The Last Wish",
-      image: "/placeholder.svg?height=400&width=270&text=Puss+in+Boots",
-      alt: "Puss in Boots: The Last Wish poster",
-      release: "December 21",
-    },
-    {
-      id: 6,
-      title: "Babylon",
-      image: "/placeholder.svg?height=400&width=270&text=Babylon",
-      alt: "Babylon poster",
-      release: "December 23",
-    },
-  ]
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+export const faqData: FAQItem[] = [
+  {
+    question: "What is IPTV?",
+    answer:
+      "IPTV stands for Internet Protocol Television. It allows you to stream TV channels and media through the internet instead of traditional methods like satellite or cable.",
+  },
+  {
+    question: "Do I need a smart TV to use IPTV?",
+    answer:
+      "No. You can use IPTV on a smart TV, smartphone, tablet, computer, or any device that supports streaming apps.",
+  },
+  {
+    question: "Is IPTV legal?",
+    answer:
+      "Yes, IPTV is legal as long as the service provider has the right to broadcast the content.",
+  },
+  {
+    question: "Can I watch IPTV while traveling?",
+    answer:
+      "Absolutely! As long as you have a stable internet connection, you can watch IPTV anywhere in the world.",
+  },
+];
+
+export const plans = [
+  {
+    name: "Basic",
+    price: "$9.99",
+    features: ["Access to 50 channels", "Standard Definition", "Basic Support"],
+    popular: false,
+  },
+  {
+    name: "Pro",
+    price: "$19.99",
+    features: [
+      "Access to 200 channels",
+      "HD Streaming",
+      "Priority Support",
+      "Multi-device",
+    ],
+    popular: true,
+  },
+  {
+    name: "Premium",
+    price: "$29.99",
+    features: [
+      "Access to 500+ channels",
+      "4K UHD Streaming",
+      "24/7 Support",
+      "Multiple screens",
+      "Offline downloads",
+    ],
+    popular: false,
+  },
+];
