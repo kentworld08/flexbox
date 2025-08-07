@@ -48,7 +48,7 @@ const MobileMenu = () => {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="text-white p-2"
+        className="text-white p-2 md:hidden"
         aria-label="Toggle Menu"
       >
         {open ? (
