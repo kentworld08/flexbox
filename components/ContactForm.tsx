@@ -34,7 +34,7 @@ export default function ContactForm() {
   return (
     <section id="contact" className="bg-[#111111] text-white px-4 py-16">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-[84px] font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent">
+        <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000]  hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
           Contact Us
         </h2>
         <p className="text-center text-gray-400 mb-10">

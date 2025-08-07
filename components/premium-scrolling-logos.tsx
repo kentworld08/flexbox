@@ -22,7 +22,7 @@ export default function PremiumScrollingLogos() {
 
       <div className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-[84px] text-center mb-8 font-medium leading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent lg:w-[900px] mx-auto">
+          <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-mediumleading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent lg:w-[900px] mx-aut">
             Trusted by Industry Leaders
           </h2>
           <p className="text-base lg:text-[17px] font-normal text-gray-300 max-w-[576px] mx-auto leading-[28px]">

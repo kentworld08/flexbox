@@ -1,36 +1,9 @@
-import { ShieldCheck, Zap, Tv, UserCheck } from "lucide-react";
-
-const features = [
-  {
-    icon: <Zap className="w-8 h-8 text-orange-500" />,
-    title: "Fast & Reliable",
-    description: "Stream seamlessly with zero buffering.",
-    glowColor: "from-orange-500 to-yellow-400",
-  },
-  {
-    icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
-    title: "Secure & Private",
-    description: "Top-notch encryption protects your data.",
-    glowColor: "from-red-500 to-pink-500",
-  },
-  {
-    icon: <Tv className="w-8 h-8 text-orange-500" />,
-    title: "Huge Channel Library",
-    description: "Over 100k channels for every taste.",
-    glowColor: "from-purple-500 to-indigo-500",
-  },
-  {
-    icon: <UserCheck className="w-8 h-8 text-orange-500" />,
-    title: "Easy Setup",
-    description: "Get started in minutes on any device.",
-    glowColor: "from-green-400 to-teal-400",
-  },
-];
+import { features } from "@/constants/Data";
 
 const FeatureSection = () => (
   <section className="lg:px-[80px] px-4 py-16 bg-[#111111]">
     <div className="max-w-6xl mx-auto ">
-      <h2 className="text-[84px] text-center mb-8 font-medium leading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent">
+      <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent  bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
         Features
       </h2>
       <p className="text-center text-gray-300 font-medium text-[17px]  mx-auto mb-12">

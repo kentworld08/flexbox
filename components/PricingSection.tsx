@@ -6,7 +6,14 @@ export default function Pricing() {
       id="pricing"
       className="bg-gray-900 text-white py-20 px-6 md:px-20"
     >
-      <h2 className="text-[84px] font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent">
+      <h2
+        className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] 
+               leading-[1.2] text-center mb-8 font-medium 
+               bg-clip-text text-transparent 
+               bg-gradient-to-r from-[#F22801] to-[#FC9000] 
+               hover:text-transparent 
+               max-w-[90%] lg:w-[900px] mx-auto"
+      >
         Pricing Plans
       </h2>
       <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-3">

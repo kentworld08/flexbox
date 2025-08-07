@@ -12,7 +12,14 @@ const FAQSection: React.FC = () => {
   return (
     <section className=" px-4 py-16 bg-[#111111]">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-[84px] text-center mb-8 font-medium leading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent">
+        <h2
+          className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] 
+               leading-[1.2] text-center mb-8 font-medium 
+               bg-clip-text text-transparent 
+               bg-gradient-to-r from-[#F22801] to-[#FC9000] 
+               hover:text-transparent 
+               max-w-[90%] lg:w-[900px] mx-auto"
+        >
           FAQ?
         </h2>
         <p className="text-center text-gray-300 font-normal leading-[28px] text-[17px]  mx-auto mb-12 max-w-[528px]">

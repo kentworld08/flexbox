@@ -118,7 +118,6 @@ export default function ScrollingLogosSection() {
               </svg>
             </button>
 
-            {/* Carousel container */}
             <div className="overflow-x-auto md:overflow-hidden rounded-2xl scroll-smooth">
               <div
                 ref={carouselRef}
@@ -128,7 +127,8 @@ export default function ScrollingLogosSection() {
                 {movieCards.map((movie, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-[85vw] sm:w-72 md:w-80 h-96 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 bg-cover bg-center relative"
+                    className="flex-shrink-0 w-[85vw] sm:w-64 md:w-72 lg:w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 bg-cover bg-center
+  "
                     style={{
                       backgroundImage: `url(${
                         movie.image || "/placeholder.svg"
@@ -136,11 +136,12 @@ export default function ScrollingLogosSection() {
                     }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                    <div className="absolute bottom-0 p-6 z-10">
-                      <h2 className="w-[91px] rounded-[16px] py-[2px] px-[8px] text-white bg-[linear-gradient(to_right,_#F22801,_#FC9000)] text-[12px] font-medium">
+
+                    <div className="absolute bottom-0 p-6 z-10 w-full">
+                      <h2 className="inline-block rounded-[16px] py-0.5 px-2.5 text-white bg-[linear-gradient(to_right,_#F22801,_#FC9000)] text-xs sm:text-sm font-medium mb-2">
                         {movie.channels}
                       </h2>
-                      <p className="text-white text-sm leading-relaxed">
+                      <p className="text-white text-sm sm:text-base leading-relaxed line-clamp-3">
                         {movie.description}
                       </p>
                     </div>

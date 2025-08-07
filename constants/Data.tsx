@@ -1,3 +1,5 @@
+import { ShieldCheck, Tv, UserCheck, Zap } from "lucide-react";
+
 export const heroImages = [
   "/Rectangle.png",
   "/card1.png",
@@ -316,5 +318,32 @@ export const plans = [
       "Offline downloads",
     ],
     popular: false,
+  },
+];
+
+export const features = [
+  {
+    icon: <Zap className="w-8 h-8 text-orange-500" />,
+    title: "Fast & Reliable",
+    description: "Stream seamlessly with zero buffering.",
+    glowColor: "from-orange-500 to-yellow-400",
+  },
+  {
+    icon: <ShieldCheck className="w-8 h-8 text-orange-500" />,
+    title: "Secure & Private",
+    description: "Top-notch encryption protects your data.",
+    glowColor: "from-red-500 to-pink-500",
+  },
+  {
+    icon: <Tv className="w-8 h-8 text-orange-500" />,
+    title: "Huge Channel Library",
+    description: "Over 100k channels for every taste.",
+    glowColor: "from-purple-500 to-indigo-500",
+  },
+  {
+    icon: <UserCheck className="w-8 h-8 text-orange-500" />,
+    title: "Easy Setup",
+    description: "Get started in minutes on any device.",
+    glowColor: "from-green-400 to-teal-400",
   },
 ];

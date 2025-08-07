@@ -17,12 +17,12 @@ const AboutIPTV = () => {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="relative z-10">
-        <h1 className="text-[84px] text-center mb-8 font-medium leading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent lg:w-[900px] mx-auto">
+        <h1 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
           About IPTV Services
         </h1>
 
-        <div className="font-poppins text-gray-200 text-base sm:text-[17px] leading-relaxed max-w-4xl mx-auto mt-8 space-y-6 px-2 sm:px-0">
-          <p className="pl-8">
+        <div className="font-poppins text-gray-200 text-base sm:text-[17px] leading-relaxed max-w-4xl mx-auto mt-8 space-y-6 px-4 sm:px-0">
+          <p>
             Flexbox appeared at the dawn of IPTV television. Over the years, we
             have evolved to provide you with the best services. We have been
             working since 2005 when IPTV television was just in its infancy. Our
@@ -32,7 +32,7 @@ const AboutIPTV = () => {
 
           <ul className="space-y-2 list-none">
             {features.map((item, index) => (
-              <li key={index}>
+              <li key={index} className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -43,7 +43,7 @@ const AboutIPTV = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-check-icon lucide-check text-[#F22801] inline-block mr-2 "
+                  className="mr-2 text-[#F22801]"
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
@@ -52,7 +52,7 @@ const AboutIPTV = () => {
             ))}
           </ul>
 
-          <p className="pl-8">
+          <p>
             When connecting our IPTV television, you can choose exactly those
             channels that you like the most. More than 1,000,000 clients
             worldwide have chosen us for the impeccable quality of TV
