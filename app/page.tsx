@@ -1,5 +1,5 @@
 import HeroSection from "@/components/hero-section";
-import ScrollingLogosSection from "@/components/scrolling-logos-section";
+import Channel from "@/components/Channels";
 import PremiumScrollingLogos from "@/components/premium-scrolling-logos";
 import MovieShowsCarousel from "@/components/movieShows";
 import AboutIPTV from "@/components/AboutIptv";
@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <div className="min-h-screen max-w-[1520px] mx-auto">
       <HeroSection />
-      <ScrollingLogosSection />
+      <Channel />
       <PremiumScrollingLogos />
       <MovieShowsCarousel />
       <AboutIPTV />

@@ -95,20 +95,7 @@ export const movieCards = [
       "We have a huge amount of TV content for children. Watch only the best channels with children's cartoons and educational programs.",
     image: "/card1.png",
   },
-  {
-    title: "For Kids",
-    channels: "12k Channels",
-    description:
-      "We have a huge amount of TV content for children. Watch only the best channels with children's cartoons and educational programs.",
-    image: "/card1.png",
-  },
-  {
-    title: "For Kids",
-    channels: "12k Channels",
-    description:
-      "We have a huge amount of TV content for children. Watch only the best channels with children's cartoons and educational programs.",
-    image: "/card1.png",
-  },
+
   {
     title: "TV Shows & Series",
     channels: "16k Channels",

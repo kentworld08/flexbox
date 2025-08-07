@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { movieCards } from "@/constants/Data";
 
-export default function ScrollingLogosSection() {
+export default function Channel() {
   const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -72,7 +72,7 @@ export default function ScrollingLogosSection() {
   };
 
   return (
-    <section className="py-16 bg-[#111111] overflow-hidden">
+    <section id="channels" className="py-16 bg-[#111111] overflow-hidden">
       <div ref={containerRef} className="container mx-auto px-4">
         <div className="mt-20">
           <div className="relative group">
