@@ -14,14 +14,12 @@ const AboutIPTV = () => {
       id="about"
       className="relative bg-[url('/aboutbg.jpg')] bg-cover bg-no-repeat py-16 px-4 sm:px-6 lg:px-20"
     >
-      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="absolute inset-0 bg-black/90 z-0" />
 
       <div className="relative z-10">
-        <h1 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
-          About IPTV Services
-        </h1>
+        <h1 className="TITLE">About IPTV Services</h1>
 
-        <div className="font-poppins text-gray-200 text-base sm:text-[17px] leading-relaxed max-w-4xl mx-auto mt-8 space-y-6 px-4 sm:px-0">
+        <div className="font-poppins CUSTOM-GRAY text-base sm:text-[17px] leading-relaxed max-w-4xl mx-auto mt-8 space-y-6 px-4 sm:px-0">
           <p>
             Flexbox appeared at the dawn of IPTV television. Over the years, we
             have evolved to provide you with the best services. We have been
@@ -43,7 +41,7 @@ const AboutIPTV = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="mr-2 text-[#F22801]"
+                  className="mr-2 text-[#f22801]"
                 >
                   <path d="M20 6 9 17l-5-5" />
                 </svg>

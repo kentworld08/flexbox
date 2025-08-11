@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is too short"),
@@ -31,13 +31,20 @@ export default function ContactForm() {
     reset();
   };
 
+  useEffect(() => {
+    if (submitted) {
+      const timer = setTimeout(() => {
+        setSubmitted(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  });
+
   return (
-    <section id="contact" className="bg-[#111111] text-white px-4 py-16">
+    <section id="contact" className="bg-primaryC text-white px-4 py-16">
+      <h2 className="TITLE">Contact Us</h2>
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000]  hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
-          Contact Us
-        </h2>
-        <p className="text-center text-gray-400 mb-10">
+        <p className="text-center CUSTOM-GRAY mb-10">
           We'd love to hear from you! Fill out the form and we`ll get back to
           you.
         </p>
@@ -88,14 +95,14 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className=" bg-[linear-gradient(to_right,_#F22801,_#FC9000)] hover:bg-orange-600 transition-all px-6 py-3 rounded-md text-white font-semibold disabled:opacity-50"
+            className="BG-GRADIENT cursor-pointer transition-all px-6 py-3 rounded-md text-white font-semibold disabled:opacity-50"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
 
           {submitted && (
             <p className="text-green-500 text-sm mt-4 text-center">
-              Message sent successfully!
+              {submitted && "Message sent successfully!"}
             </p>
           )}
         </form>

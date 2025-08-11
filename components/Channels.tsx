@@ -72,10 +72,10 @@ export default function Channel() {
   };
 
   return (
-    <section id="channels" className="py-16 bg-[#111111] overflow-hidden">
+    <section id="channels" className="py-16 bg-primaryC">
       <div ref={containerRef} className="container mx-auto px-4">
-        <div className="mt-20">
-          <div className="relative group">
+        <div className="mt-20 ">
+          <div className="relative group ">
             <button
               onClick={handlePrevMovie}
               disabled={currentMovieIndex === 0}
@@ -118,7 +118,7 @@ export default function Channel() {
               </svg>
             </button>
 
-            <div className="overflow-x-auto md:overflow-hidden rounded-2xl scroll-smooth">
+            <div className="overflow-x-auto md:overflow-hidden rounded-2xl scroll-smooth hide-scrollbar">
               <div
                 ref={carouselRef}
                 className="flex gap-6 px-6 py-4 transition-transform duration-500 ease-in-out md:overflow-hidden"
@@ -138,7 +138,7 @@ export default function Channel() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
                     <div className="absolute bottom-0 p-6 z-10 w-full">
-                      <h2 className="inline-block rounded-[16px] py-0.5 px-2.5 text-white bg-[linear-gradient(to_right,_#F22801,_#FC9000)] text-xs sm:text-sm font-medium mb-2">
+                      <h2 className="inline-block rounded-[16px] py-0.5 px-2.5 text-white BG-GRADIENT text-xs sm:text-sm font-medium mb-2">
                         {movie.channels}
                       </h2>
                       <p className="text-white text-sm sm:text-base leading-relaxed line-clamp-3">

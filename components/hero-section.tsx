@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { heroImages } from "@/constants/Data";
 import Navbar from "./Navbar";
 import { people } from "@/constants/Data";
+import Overley from "./Overley";
 
 const maxVisible = 4;
 const visiblePeople = people.slice(0, maxVisible);
@@ -30,15 +31,14 @@ export default function HeroSection() {
           alt={`Hero background ${currentSlide + 1}`}
           className="w-full h-full object-cover transition-opacity duration-1000"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+        <Overley />
       </div>
       <Navbar />
 
       <div className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-100px)] px-4 md:px-6 lg:px-12">
         <div className="max-w-2xl">
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-white/90 text-sm md:text-base">
+            <span className="CUSTOM-WHITE text-sm md:text-base">
               Latest Movies
             </span>
             <div className="flex -space-x-2">
@@ -67,7 +67,7 @@ export default function HeroSection() {
             FLEXBOX WORLD
           </h1>
 
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg">
+          <p className="text-lg md:text-xl CUSTOM-WHITE mb-8 max-w-lg">
             Connect today and start your Adventure
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 md:w-4 md:h-2 rounded-md transition-all duration-300 ${
                 index === currentSlide
-                  ? "bg-[linear-gradient(to_right,_#F22801,_#FC9000)] scale-125"
+                  ? "BG-GRADIENT scale-125"
                   : "bg-white/50 hover:bg-white/70"
               }`}
               aria-label={`Go to slide ${index + 1}`}

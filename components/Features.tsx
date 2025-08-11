@@ -1,12 +1,10 @@
 import { features } from "@/constants/Data";
 
 const FeatureSection = () => (
-  <section className="lg:px-[80px] px-4 py-16 bg-[#111111]">
+  <section className="lg:px-[80px] px-4 py-16 bg-primaryC">
     <div className="max-w-6xl mx-auto ">
-      <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-medium bg-clip-text text-transparent  bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent max-w-[90%] lg:w-[900px] mx-auto">
-        Features
-      </h2>
-      <p className="text-center text-gray-300 font-medium text-[17px]  mx-auto mb-12">
+      <h2 className="TITLE">Features</h2>
+      <p className="text-center CUSTOM-GRAY font-medium text-[17px]  mx-auto mb-12">
         Enjoy the benefits of Flexbox IPTV:
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">

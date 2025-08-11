@@ -192,24 +192,24 @@ type FAQItem = {
 
 export const faqData: FAQItem[] = [
   {
-    question: "What is IPTV?",
+    question: "How to connect IP Television?",
     answer:
-      "IPTV stands for Internet Protocol Television. It allows you to stream TV channels and media through the internet instead of traditional methods like satellite or cable.",
+      "It is very easy to connect IPTV. Contact us on telegram or send a request, conclude a contract, and our employee will configure your profile.",
   },
   {
-    question: "Do I need a smart TV to use IPTV?",
+    question: "I only need specific channels. Is it possible?",
     answer:
-      "No. You can use IPTV on a smart TV, smartphone, tablet, computer, or any device that supports streaming apps.",
+      "Yes, you can choose any channels you want and not add unnecessary channels to your package.",
   },
   {
-    question: "Is IPTV legal?",
+    question: "Do you provide 8K video quality?",
     answer:
-      "Yes, IPTV is legal as long as the service provider has the right to broadcast the content.",
+      "Yes, we offer the highest video quality possible. By connecting IPTV, you can watch movies and TV series in 8K format.",
   },
   {
-    question: "Can I watch IPTV while traveling?",
+    question: "How do I pay for the services?",
     answer:
-      "Absolutely! As long as you have a stable internet connection, you can watch IPTV anywhere in the world.",
+      "Payment is made according to the chosen tariff plan. You can pay for IPTV in any way convenient for you, please communicate with us in regards to your payment method.",
   },
 ];
 
@@ -247,7 +247,7 @@ export const plans = [
 
 export const features = [
   {
-    icon: <Zap className="w-8 h-8 text-[#F22801]" />,
+    icon: <Zap className="w-8 h-8 text-[#f22801]" />,
     title: "Fast & Reliable",
     description: "Stream seamlessly with zero buffering.",
     glowColor: "from-orange-500 to-yellow-400",

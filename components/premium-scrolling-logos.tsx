@@ -13,8 +13,8 @@ export default function PremiumScrollingLogos() {
   const infiniteLogos: infiniteLogosProps[] = [...logo, ...logo, ...logo];
 
   return (
-    <section className=" px-4 lg:px-[80px] py-20 bg-[#111111] text-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-[#111111]" />
+    <section className=" px-4 lg:px-[80px] py-20 bg-primaryC text-white overflow-hidden relative">
+      <div className="absolute inset-0 bg-primaryC" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
@@ -22,15 +22,13 @@ export default function PremiumScrollingLogos() {
 
       <div className="relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[84px] leading-[1.2] text-center mb-8 font-mediumleading-[102px] bg-clip-text text-transparent bg-gradient-to-r from-[#F22801] to-[#FC9000] hover:text-transparent lg:w-[900px] mx-aut0 justify-self-center">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-base lg:text-[17px] font-normal text-gray-300 max-w-[576px] mx-auto leading-[28px]">
+          <h2 className="TITLE">Trusted by Industry Leaders</h2>
+          <p className="text-base lg:text-[17px] font-normal CUSTOM-GRAY max-w-[576px] mx-auto leading-[28px]">
             Partnering with the world's leading entertainment companies to bring
             you the best movie experience
           </p>
         </div>
-        <div className="relative mb-12 ">
+        <div className="relative mb-12">
           <div className="flex overflow-hidden">
             <div className="flex animate-scroll-smooth hover:pause-animation">
               {infiniteLogos.map((logo, index) => (

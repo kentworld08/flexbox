@@ -90,16 +90,16 @@ export default function MovieShowsCarousel() {
   };
 
   return (
-    <section className="bg-[#111111] text-white py-12 md:py-20 min-h-screen flex flex-col items-center justify-center">
+    <section className="bg-primaryC text-white py-12 md:py-20 min-h-screen flex flex-col items-center justify-center">
       <div className="container mx-auto px-4 w-full max-w-5xl">
         <div className="flex justify-center mb-12 ">
-          <div className="relative flex rounded-full p-1 bg-transparent border border-[#FC9000]">
+          <div className="relative flex rounded-full p-1 bg-transparent border border-ORANGE">
             <Button
               onClick={() => setActiveTab("movies")}
               className={`relative px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
                 activeTab === "movies"
-                  ? "bg-[linear-gradient(to_right,_#F22801,_#FC9000)] text-white shadow-lg"
-                  : "bg-transparent text-gray-400 hover:text-white"
+                  ? "BG-GRADIENT text-white shadow-lg"
+                  : "bg-transparent CUSTOM-GRAY hover:text-white"
               }`}
             >
               Movies
@@ -108,8 +108,8 @@ export default function MovieShowsCarousel() {
               onClick={() => setActiveTab("shows")}
               className={`relative px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ${
                 activeTab === "shows"
-                  ? "bg-[linear-gradient(to_right,_#F22801,_#FC9000)] text-white shadow-lg"
-                  : "bg-transparent text-gray-400 hover:text-white"
+                  ? "BG-GRADIENT text-white shadow-lg"
+                  : "bg-transparent CUSTOM-GRAY hover:text-white"
               }`}
             >
               Shows
