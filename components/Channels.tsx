@@ -1,157 +1,119 @@
 "use client";
-
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { movieCards } from "@/constants/Data";
 
 export default function Channel() {
-  const [currentMovieIndex, setCurrentMovieIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [cardWidth, setCardWidth] = useState(320);
-  const cardGap = 24;
-  const [cardsPerView, setCardsPerView] = useState(1);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(1);
 
   useEffect(() => {
-    const updateMeasurements = () => {
-      if (containerRef.current && carouselRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-
-        const cardEl = carouselRef.current.querySelector<HTMLDivElement>("div");
-        if (cardEl) {
-          const actualCardWidth = cardEl.getBoundingClientRect().width;
-          const totalCardWidth = actualCardWidth + cardGap;
-          setCardWidth(totalCardWidth);
-
-          const visibleCards = Math.floor(containerWidth / totalCardWidth);
-          setCardsPerView(visibleCards > 0 ? visibleCards : 1);
-
-          setCurrentMovieIndex((prevIndex) => {
-            const maxIndex = movieCards.length - visibleCards;
-
-            return Math.min(Math.max(prevIndex, 0), Math.max(maxIndex, 0));
-          });
-        }
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setVisibleCards(3);
+      } else if (window.innerWidth >= 768) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(1);
       }
     };
-
-    updateMeasurements();
-
-    window.addEventListener("resize", updateMeasurements);
-    return () => window.removeEventListener("resize", updateMeasurements);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Scroll via transform only on desktop (md+)
-  useEffect(() => {
-    if (!carouselRef.current) return;
-
-    const handleScrollTransform = () => {
-      const isDesktop = window.innerWidth >= 768;
-      if (isDesktop) {
-        const offset = currentMovieIndex * cardWidth;
-        carouselRef.current!.style.transform = `translateX(-${offset}px)`;
-      } else {
-        carouselRef.current!.style.transform = "";
-      }
-    };
-
-    handleScrollTransform();
-
-    window.addEventListener("resize", handleScrollTransform);
-    return () => window.removeEventListener("resize", handleScrollTransform);
-  }, [currentMovieIndex, cardWidth]);
-
-  const handleNextMovie = () => {
-    setCurrentMovieIndex((prevIndex) => {
-      const maxIndex = movieCards.length - cardsPerView;
-      return Math.min(prevIndex + 1, Math.max(maxIndex, 0));
-    });
+  const handleNext = () => {
+    if (currentCardIndex < movieCards.length - visibleCards) {
+      setCurrentCardIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
-  const handlePrevMovie = () => {
-    setCurrentMovieIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  const handlePrev = () => {
+    if (currentCardIndex > 0) {
+      setCurrentCardIndex((prevIndex) => prevIndex - 1);
+    }
   };
+
+  const isPrevDisabled = currentCardIndex === 0;
+  const isNextDisabled = currentCardIndex >= movieCards.length - visibleCards;
 
   return (
-    <section id="channels" className="py-16 bg-primaryC">
-      <div ref={containerRef} className="container mx-auto px-4">
-        <div className="mt-20 ">
-          <div className="relative group ">
-            <button
-              onClick={handlePrevMovie}
-              disabled={currentMovieIndex === 0}
-              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-              aria-label="Scroll left"
+    <div
+      id="channels"
+      className="relative w-full mx-auto overflow-hidden px-4  py-20 bg-primaryC"
+    >
+      <div
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{
+          transform: `translateX(-${currentCardIndex * (100 / visibleCards)}%)`,
+        }}
+      >
+        {movieCards.map((card, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 p-4"
+          >
+            <div
+              className="relative w-full rounded-lg shadow-md h-96 flex items-end overflow-hidden hover:scale-105 transition-transform duration-300"
+              style={{
+                backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('${card.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
-              <svg
-                className="w-6 h-6 text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-
-            <button
-              onClick={handleNextMovie}
-              disabled={currentMovieIndex >= movieCards.length - cardsPerView}
-              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-              aria-label="Scroll right"
-            >
-              <svg
-                className="w-6 h-6 text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-
-            <div className="overflow-x-auto md:overflow-hidden rounded-2xl scroll-smooth hide-scrollbar">
-              <div
-                ref={carouselRef}
-                className="flex gap-6 px-6 py-4 transition-transform duration-500 ease-in-out md:overflow-hidden"
-                style={{ scrollBehavior: "smooth" }}
-              >
-                {movieCards.map((movie, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 w-[85vw] sm:w-64 md:w-72 lg:w-80 h-96 rounded-2xl shadow-xl overflow-hidden relative transition-all duration-500 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 bg-cover bg-center
-  "
-                    style={{
-                      backgroundImage: `url(${
-                        movie.image || "/placeholder.svg"
-                      })`,
-                    }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
-                    <div className="absolute bottom-0 p-6 z-10 w-full">
-                      <h2 className="inline-block rounded-[16px] py-0.5 px-2.5 text-white BG-GRADIENT text-xs sm:text-sm font-medium mb-2">
-                        {movie.channels}
-                      </h2>
-                      <p className="text-white text-sm sm:text-base leading-relaxed line-clamp-3">
-                        {movie.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="p-6 text-white text-left">
+                <p className="text-[12px] mb-1 font-bold BG-GRADIENT w-fit px-2 py-1 rounded-full">
+                  {card.channels}
+                </p>
+                <h3 className="text-2xl font-semibold mb-2">{card.title}</h3>
+                <p className="text-sm">{card.description}</p>
               </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+
+      <button
+        onClick={handlePrev}
+        disabled={isPrevDisabled}
+        className={`absolute top-1/2 left-0 z-10 -translate-y-1/2 bg-white cursor-pointer text-white p-2 rounded-full ${
+          isPrevDisabled ? "opacity-50 cursor-not-allowed" : ""
+        }`}
+        aria-label="Previous card"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="w-6 h-6 text-gray-800"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button
+        onClick={handleNext}
+        disabled={isNextDisabled}
+        className={`absolute top-1/2 right-0 z-10 -translate-y-1/2 bg-white cursor-pointer text-white p-2 rounded-full ${
+          isNextDisabled ? "opacity-50 cursor-not-allowed" : ""
+        }`}
+        aria-label="Next card"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="w-6 h-6 text-gray-800"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
   );
 }
